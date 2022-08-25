@@ -12,7 +12,7 @@ const HeroBanner = () => {
       }}
       position="relative"
       p="20px">
-      <Typography color="#ed1334" fontWeight="600"
+      <Typography color="#ed1334" fontWeight="1000"
         fontSize="26px">
         M.D Fitness
       </Typography>
