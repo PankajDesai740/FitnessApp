@@ -9,8 +9,8 @@ import Navbar from './components/Navbar';
 import Footer from './components/Footer';
 
 
-const App = () => {
-  return (
+const App = () => (
+ 
     <Box width="400px" sx={{width:{xl:'1448px'}}} m="auto">
         <Navbar/>
         <Routes>
@@ -19,7 +19,7 @@ const App = () => {
         </Routes>
         <Footer/>
     </Box>
-  )
-}
+ 
+);
 
 export default App

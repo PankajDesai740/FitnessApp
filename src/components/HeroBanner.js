@@ -24,7 +24,7 @@ const HeroBanner = () => {
       >
         Sweat, Smile <br /> and Repeat
       </Typography>
-      <Typography fontSize="22px" LineHeight="35px" mb={4}>
+      <Typography fontSize="22px" lineHeight="35px" mb={4}>
         Check out the most effective Exercises
       </Typography>
       <Button href="#exercises" variant="contained" color="error"
@@ -42,7 +42,7 @@ const HeroBanner = () => {
       >
         Exercise
       </Typography>
-      <img src={HeroBannerImage} alt="Banner" className="hero-banner-img" />
+      <img src={HeroBannerImage} alt="hero-banner" className="hero-banner-img" />
     </Box>
   )
 }
