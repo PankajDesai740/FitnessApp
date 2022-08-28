@@ -14,7 +14,7 @@ const Exercises = ({ exercises, setExercises, bodyPart }) => {
 
   const indexOfFirstExercise = indexOfLastExercise - exercisesPerpage;
 
-  const currentExercises = exercises.slice(indexOfFirstExercise,indexOfLastExercise)
+  const currentExercises = exercises.slice(indexOfFirstExercise, indexOfLastExercise)
 
   const paginate = (event, value) => {
     setCurrentPage(value);
@@ -23,25 +23,25 @@ const Exercises = ({ exercises, setExercises, bodyPart }) => {
   };
 
   useEffect(() => {
-   const fetchExercisesData = async () => {
-    let exercisesData = [];
+    const fetchExercisesData = async () => {
+      let exercisesData = [];
 
-    if (bodyPart === 'all') {
-       exercisesData = await fetchData
-        ('https://exercisedb.p.rapidapi.com/exercises',exerciseOptions);
-    } else{
-       exercisesData = await fetchData
-        (`https://exercisedb.p.rapidapi.com/exercises/bodyPart/${bodyPart}`,exerciseOptions);
+      if (bodyPart === 'all') {
+        exercisesData = await fetchData
+          ('https://exercisedb.p.rapidapi.com/exercises', exerciseOptions);
+      } else {
+        exercisesData = await fetchData
+          (`https://exercisedb.p.rapidapi.com/exercises/bodyPart/${bodyPart}`, exerciseOptions);
+      }
+      setExercises(exercisesData);
+
     }
-    setExercises(exercisesData);
-   
-   }
-   fetchExercisesData();
+    fetchExercisesData();
 
   }, [bodyPart])
-  
-  
-  
+
+
+
 
   return (
     <Box id="exercises"
@@ -57,7 +57,7 @@ const Exercises = ({ exercises, setExercises, bodyPart }) => {
         sx={{ gap: { lg: '107px', xs: '50px' } }}
         flexWrap="wrap" justifyContent="center"
       >
-        { currentExercises.map((exercise, index) => (
+        {currentExercises.map((exercise, index) => (
           <ExerciseCard key={index} exercise={exercise} />
         ))}
 
