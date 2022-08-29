@@ -10,17 +10,6 @@ const Exercises = ({ exercises, setExercises, bodyPart }) => {
   const [currentPage, setCurrentPage] = useState(1);
   const exercisesPerpage = 9;
 
-  const indexOfLastExercise = currentPage * exercisesPerpage;
-
-  const indexOfFirstExercise = indexOfLastExercise - exercisesPerpage;
-
-  const currentExercises = exercises.slice(indexOfFirstExercise, indexOfLastExercise)
-
-  const paginate = (event, value) => {
-    setCurrentPage(value);
-
-    window.scrollTo({ top: 1800, behavior: 'smooth' });
-  };
 
   useEffect(() => {
     const fetchExercisesData = async () => {
@@ -35,13 +24,23 @@ const Exercises = ({ exercises, setExercises, bodyPart }) => {
       }
       setExercises(exercisesData);
 
-    }
+    };
     fetchExercisesData();
 
-  }, [bodyPart])
+  }, [bodyPart]);
 
 
+  const indexOfLastExercise = currentPage * exercisesPerpage;
 
+  const indexOfFirstExercise = indexOfLastExercise - exercisesPerpage;
+
+  const currentExercises = exercises.slice(indexOfFirstExercise, indexOfLastExercise);
+
+  const paginate = (e, value) => {
+    setCurrentPage(value);
+
+    window.scrollTo({ top: 1800, behavior: 'smooth' });
+  };
 
   return (
     <Box id="exercises"
@@ -54,7 +53,7 @@ const Exercises = ({ exercises, setExercises, bodyPart }) => {
         Showing results
       </Typography>
       <Stack direction="row"
-        sx={{ gap: { lg: '107px', xs: '50px' } }}
+        sx={{ gap: { lg: '107px', xs: '39px' } }}
         flexWrap="wrap" justifyContent="center"
       >
         {currentExercises.map((exercise, index) => (
