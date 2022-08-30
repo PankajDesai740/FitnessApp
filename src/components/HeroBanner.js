@@ -20,9 +20,10 @@ const HeroBanner = () => {
         fontWeight={700}
         sx={{
           fontSize: { lg: '44px', xs: '40px' }
-        }} mb="23px" mt="30px"
+        }} mb="20px" mt="20px"
       >
-        Sweat, Smile <br /> and Repeat
+        Sweat, Smile <br /> 
+        and Repeat
       </Typography>
       <Typography fontSize="22px" fontFamily="Roboto" lineHeight="35px" mb={4}>
         Check out the most effective Exercises Personalized to You

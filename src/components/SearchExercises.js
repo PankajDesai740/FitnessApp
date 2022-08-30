@@ -45,7 +45,7 @@ const SearchExercises = ({setExercises,bodyPart,setBodyPart}) => {
       <Typography
         fontWeight={700}
         sx={{ fontSize: { lg: '44px', xs: '30px' } }}
-        mb="50px" textAlign="center"
+        mb="49px" textAlign="center"
       >
         Awesome Exercises You <br />
         Should Know
@@ -53,17 +53,18 @@ const SearchExercises = ({setExercises,bodyPart,setBodyPart}) => {
 
       <Box position="relative" mb="72px">
         <TextField
+         height="76px"
           sx={{
             input: {
               fontWeight: '700',
               border: 'none',
               borderRadius: '4px'
             },
-            width: { lg: '800px', xs: '350px' },
+            width: { lg: '1100px', xs: '350px' },
             backgroundColor: '#fff',
             borderRadius: '40px'
           }}
-          height="76px"
+      
           value={search}
           onChange={(e) => setSearch(e.target.value.toLowerCase())}
           placeholder="Search Exercises"
@@ -94,7 +95,7 @@ const SearchExercises = ({setExercises,bodyPart,setBodyPart}) => {
       </Box>
 
     </Stack>
-  )
-}
+  );
+};
 
-export default SearchExercises
+export default SearchExercises;
