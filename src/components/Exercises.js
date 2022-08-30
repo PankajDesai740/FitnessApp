@@ -44,7 +44,7 @@ const Exercises = ({ exercises, setExercises, bodyPart }) => {
 
   return (
     <Box id="exercises"
-      sx={{ mt: { lg: '110px' } }}
+      sx={{ mt: { lg: '110px' ,xs:'50px'} }}
       mt="50px"
       p="20px"
     >

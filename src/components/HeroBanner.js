@@ -26,7 +26,7 @@ const HeroBanner = () => {
         and Repeat
       </Typography>
       <Typography fontSize="22px" fontFamily="Roboto" lineHeight="35px" mb={4}>
-        Check out the most effective Exercises Personalized to You
+        Check out the most effective Exercises 
       </Typography>
     
       <Button href="#exercises" variant="contained" color="error"
@@ -45,9 +45,9 @@ const HeroBanner = () => {
       >
         Exercises
       </Typography>
-      <img src={HeroBannerImage} alt="hero-banner" className="hero-banner-img" />
+      <img src={HeroBannerImage} alt="banner" className="hero-banner-img" />
     </Box>
-  )
-}
+  );
+};
 
-export default HeroBanner
+export default HeroBanner;
